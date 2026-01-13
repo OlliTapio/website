@@ -249,6 +249,68 @@ section + section {
   font-size: 0.9rem;
 }
 
+/* Experience/CV */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.experience-item {
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.experience-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.experience-header h3 {
+  margin-bottom: 0;
+}
+
+.experience-date {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.experience-company {
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-xs);
+}
+
+.experience-item ul {
+  margin-top: var(--spacing-xs);
+  padding-left: var(--spacing-md);
+  color: var(--color-text-muted);
+}
+
+.experience-item li {
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Education */
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.education-item h3 {
+  margin-bottom: 0;
+  font-size: 1.1rem;
+}
+
 /* Contact */
 .contact-info {
   font-size: 1.1rem;
