@@ -92,14 +92,18 @@ header .container {
 }
 
 .logo {
-  font-weight: 600;
-  font-size: 1.25rem;
-  color: var(--color-text);
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 32px;
+  width: auto;
 }
 
 .logo:hover {
   text-decoration: none;
-  color: var(--color-accent);
+  opacity: 0.8;
 }
 
 nav {
