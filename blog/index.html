@@ -5,19 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog - Olli Lehikoinen</title>
   <meta name="description" content="Thoughts on entrepreneurship, software development, and building products.">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/includes.js"></script>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <a href="/" class="logo">otl.fi</a>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/blog/">Blog</a>
-        <a href="/#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <div data-include="/includes/header.html"></div>
 
   <main>
     <section class="hero">
@@ -50,10 +42,6 @@
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Olli Lehikoinen</p>
-    </div>
-  </footer>
+  <div data-include="/includes/footer.html"></div>
 </body>
 </html>
