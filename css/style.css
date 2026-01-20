@@ -42,6 +42,7 @@
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
+  --radius-pill: 20px;
 }
 
 html {
@@ -563,7 +564,7 @@ section:nth-child(6) { animation-delay: 0.5s; }
   color: white;
   background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
   padding: 0.25rem 0.75rem;
-  border-radius: 20px;
+  border-radius: var(--radius-pill);
   font-weight: 500;
   white-space: nowrap;
 }
@@ -616,7 +617,6 @@ section:nth-child(6) { animation-delay: 0.5s; }
 
 .education-item h3 {
   margin-bottom: var(--spacing-xs);
-  font-size: 1.1rem;
   font-family: var(--font-heading);
 }
 
