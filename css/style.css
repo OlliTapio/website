@@ -925,7 +925,8 @@ footer::before {
   .view-all-link,
   #contact .container::before,
   #contact .container::after,
-  .social-links {
+  .social-links,
+  .testimonial::before {
     display: none !important;
   }
 
@@ -995,7 +996,7 @@ footer::before {
     color: #c44536;
     margin-bottom: 3pt;
     padding-bottom: 2pt;
-    border-bottom: 0.75pt solid #ddd;
+    border-bottom: 0.75pt solid #ccc;
     display: block;
     font-weight: 700;
   }
@@ -1017,7 +1018,7 @@ footer::before {
   .experience-item {
     background: transparent;
     padding: 3pt 0;
-    border-bottom: 0.5pt solid #e8e8e8;
+    border-bottom: 0.5pt solid #d0d0d0;
     page-break-inside: avoid;
     break-inside: avoid;
   }
@@ -1085,7 +1086,7 @@ footer::before {
   }
 
   .experience-item li::marker {
-    color: #999;
+    color: #666;
   }
 
   /* ===== Education ===== */
