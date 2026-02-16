@@ -14,6 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Wiggle peek character on click
+  const peekChar = document.querySelector('.peek-character');
+  if (peekChar) {
+    peekChar.addEventListener('click', () => {
+      peekChar.style.animation = 'none';
+      peekChar.offsetHeight; // force reflow
+      peekChar.style.animation = 'wiggle 0.6s ease-in-out 1 forwards';
+    });
+  }
+
   // Trigger peek character animation when contact section scrolls into view
   const contact = document.querySelector('#contact .container');
   if (contact) {
