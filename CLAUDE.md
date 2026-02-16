@@ -1,6 +1,6 @@
 # otl.fi — Personal CV & Blog
 
-Personal portfolio website for Olli Lehikoinen, primarily used for job seeking. Serves as both a CV/resume and a blog about entrepreneurship and software development.
+Personal portfolio website for Olli Lehikoinen, primarily used for job seeking in the EU/Nordic market. Serves as both a CV/resume and a blog about entrepreneurship and software development. The target audience is recruiters and hiring managers familiar with Nordic norms (e.g., Finnish education timelines, military service).
 
 ## Purpose
 
