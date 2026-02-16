@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   includes.forEach(async (el) => {
     const file = el.getAttribute('data-include');
     try {
-      const response = await fetch(file + '?v=' + Date.now());
+      const response = await fetch(file);
       if (response.ok) {
         el.outerHTML = await response.text();
       }
