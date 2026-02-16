@@ -399,6 +399,19 @@ section:nth-child(6) { animation-delay: 0.5s; }
   font-weight: 600;
 }
 
+.linkedin-link {
+  color: var(--color-primary);
+  opacity: 0.4;
+  transition: opacity 0.2s ease;
+  vertical-align: middle;
+  margin-left: 0.25rem;
+  display: inline-block;
+}
+
+.linkedin-link:hover {
+  opacity: 1;
+}
+
 /* Blog list */
 .blog-list {
   display: flex;
