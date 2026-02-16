@@ -302,26 +302,34 @@ nav a:hover::after {
   line-height: 1.8;
 }
 
+.experience-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
 .cv-download-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  margin-top: var(--spacing-md);
-  padding: 0.75rem 1.5rem;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
-  color: white;
-  border: none;
+  gap: 0.35rem;
+  padding: 0.4rem 0.9rem;
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
   border-radius: var(--radius-sm);
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.8rem;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .cv-download-btn:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 10px 30px rgba(196, 69, 54, 0.3);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: white;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(196, 69, 54, 0.25);
 }
 
 /* Sections */
@@ -1149,6 +1157,25 @@ footer::before {
 
   a::after {
     display: none !important;
+  }
+
+  /* ===== Branded footer for print ===== */
+  main::after {
+    content: "otl.fi";
+    display: block;
+    margin-top: 12pt;
+    padding-top: 6pt;
+    border-top: 1pt solid #e8e8e8;
+    font-size: 7pt;
+    color: #c44536;
+    text-align: right;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  /* Experience heading layout in print */
+  .experience-heading {
+    display: block;
   }
 }
 
