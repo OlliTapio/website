@@ -22,7 +22,7 @@ Personal portfolio website for Olli Lehikoinen, primarily used for job seeking i
 index.html          — Homepage (hero, about, experience, education, testimonials, blog, contact)
 blog/index.html     — Blog listing
 blog/*.html         — Individual blog posts
-css/style.css       — All styling (~850 lines, CSS variables, responsive, animations)
+css/style.css       — All styling (~1160 lines, CSS variables, responsive, animations, print CV)
 js/includes.js      — Dynamic header/footer loading, peek character interaction
 includes/           — Shared header.html and footer.html (loaded via fetch)
 assets/             — Images, favicons, peek character PNG
@@ -39,5 +39,7 @@ assets/             — Images, favicons, peek character PNG
 ## Key Decisions
 
 - No framework/build tool — keeps it simple, fast, and easy to deploy
-- Footer copyright year auto-generated via JS
+- Footer copyright year is static (update manually each January)
 - Header/footer loaded dynamically via `data-include` attributes
+- "Download CV" button triggers `window.print()` — print stylesheet formats the page as a clean one-page CV
+- Print CSS hides non-CV sections (blog, testimonials, contact) and injects contact info via `::after`
