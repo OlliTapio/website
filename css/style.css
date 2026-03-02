@@ -302,6 +302,20 @@ nav a:hover::after {
   line-height: 1.8;
 }
 
+/* Hero background photo */
+.hero.has-hero-bg {
+  overflow: hidden;
+}
+
+.hero.has-hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/assets/photos/alps-golden-sunset.jpg') center 40%/cover no-repeat;
+  opacity: 0.1;
+  z-index: -1;
+}
+
 .experience-heading {
   display: flex;
   justify-content: space-between;
@@ -887,18 +901,18 @@ footer::before {
   }
 }
 
-/* About section layout with side photo */
-.about-layout {
+/* Writing section layout with side photo */
+.writing-layout {
   display: flex;
   align-items: center;
   gap: var(--spacing-lg);
 }
 
-.about-text {
+.writing-content {
   flex: 1;
 }
 
-.about-photo {
+.writing-photo {
   width: 200px;
   height: 300px;
   object-fit: cover;
@@ -909,18 +923,18 @@ footer::before {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.about-photo:hover {
+.writing-photo:hover {
   transform: rotate(2deg) scale(1.03);
   box-shadow: var(--shadow-hover);
 }
 
 @media (max-width: 640px) {
-  .about-layout {
+  .writing-layout {
     flex-direction: column;
     gap: var(--spacing-md);
   }
 
-  .about-photo {
+  .writing-photo {
     width: 100%;
     height: 200px;
     object-position: center 55%;
@@ -953,6 +967,10 @@ footer::before {
 .photo-card:hover {
   transform: translateY(-6px) rotate(-1deg);
   box-shadow: var(--shadow-hover);
+}
+
+.photo-card:nth-child(2):hover {
+  transform: translateY(-6px) rotate(1.5deg);
 }
 
 .photo-card img {
@@ -1057,7 +1075,7 @@ footer::before {
   .hero .greeting,
   .hero .wave,
   .hero::before,
-  .about-photo,
+  .writing-photo,
   .peek-character,
   .cv-download-btn,
   .linkedin-link svg,
