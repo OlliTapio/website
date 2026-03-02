@@ -887,6 +887,111 @@ footer::before {
   }
 }
 
+/* About section background image */
+.about.has-bg-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.about.has-bg-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/assets/photos/alps-ducati-moon.jpg') center/cover no-repeat;
+  opacity: 0.12;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.about .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Beyond the Screen - Photo gallery */
+.beyond-intro {
+  font-family: var(--font-accent);
+  font-size: 1.4rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-md);
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+}
+
+.photo-card {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  background: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-card:hover {
+  transform: translateY(-6px) rotate(-1deg);
+  box-shadow: var(--shadow-hover);
+}
+
+.photo-card img {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Show the Ducati at the bottom of the frame */
+.photo-card:first-child img {
+  object-position: center 70%;
+}
+
+/* Show palms and boulders for the portrait Seychelles shot */
+.photo-card:nth-child(2) img {
+  object-position: center 25%;
+}
+
+.photo-card figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--spacing-sm);
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.65));
+  color: white;
+  font-family: var(--font-accent);
+  font-size: 1.15rem;
+  font-weight: 700;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.photo-card:hover figcaption {
+  transform: translateY(0);
+}
+
+@media (max-width: 640px) {
+  .photo-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+
+  .photo-card img {
+    height: 220px;
+  }
+
+  .photo-card figcaption {
+    transform: translateY(0);
+  }
+
+  .beyond-intro {
+    font-size: 1.2rem;
+  }
+}
+
 /* Print styles for CV */
 @media print {
   /* ===== Page setup ===== */
@@ -946,6 +1051,7 @@ footer::before {
 
   /* Hide sections not relevant to a printed CV */
   .about,
+  .beyond-screen,
   section:has(.testimonials),
   section:has(.blog-list),
   section:has(.blog-list) + p,
