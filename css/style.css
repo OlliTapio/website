@@ -887,25 +887,44 @@ footer::before {
   }
 }
 
-/* About section background image */
-.about.has-bg-image {
-  position: relative;
-  overflow: hidden;
+/* About section layout with side photo */
+.about-layout {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
 }
 
-.about.has-bg-image::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: url('/assets/photos/alps-ducati-moon.jpg') center/cover no-repeat;
-  opacity: 0.12;
-  z-index: 0;
-  pointer-events: none;
+.about-text {
+  flex: 1;
 }
 
-.about .container {
-  position: relative;
-  z-index: 1;
+.about-photo {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center 40%;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-photo:hover {
+  transform: rotate(2deg) scale(1.03);
+  box-shadow: var(--shadow-hover);
+}
+
+@media (max-width: 640px) {
+  .about-layout {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .about-photo {
+    width: 100%;
+    height: 200px;
+    object-position: center 55%;
+  }
 }
 
 /* Beyond the Screen - Photo gallery */
@@ -1038,6 +1057,7 @@ footer::before {
   .hero .greeting,
   .hero .wave,
   .hero::before,
+  .about-photo,
   .peek-character,
   .cv-download-btn,
   .linkedin-link svg,
