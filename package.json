@@ -1,0 +1,11 @@
+{
+  "name": "otl-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "cv": "node scripts/build-cv.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.55.0"
+  }
+}

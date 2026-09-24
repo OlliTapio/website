@@ -41,5 +41,5 @@ assets/             — Images, favicons, peek character PNG
 - No framework/build tool — keeps it simple, fast, and easy to deploy
 - Footer copyright year is static (update manually each January)
 - Header/footer loaded dynamically via `data-include` attributes
-- "Download CV" button triggers `window.print()` — print stylesheet formats the page as a clean one-page CV
+- "Save as PDF" links to a pre-built text PDF (`otl-cv.pdf`), rendered from the print stylesheet by `npm run cv` (Playwright). A GitHub Action rebuilds and commits it on pushes touching `index.html`, `css/**`, `assets/**`. Not `window.print()`: "Microsoft Print to PDF" produces image-only PDFs that ATS parsers read as blank
 - Print CSS hides non-CV sections (blog, testimonials, contact) and injects contact info via `::after`

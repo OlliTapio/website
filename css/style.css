@@ -334,6 +334,7 @@ nav a:hover::after {
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 0.8rem;
+  line-height: normal;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -1099,6 +1100,7 @@ footer::before {
   .hero .greeting,
   .hero .wave,
   .hero::before,
+  .hero.has-hero-bg::after,
   .writing-photo,
   .peek-character,
   .cv-download-btn,
@@ -1271,7 +1273,7 @@ footer::before {
     color: #666;
   }
 
-  .tech-tags {
+  .experience-item .tech-tags {
     margin-top: 2pt;
     padding-left: 0;
     gap: 3pt;
@@ -1284,7 +1286,7 @@ footer::before {
     background: transparent;
     border: 0.5pt solid #bbb;
     padding: 0.5pt 4pt;
-    border-radius: 6pt;
+    border-radius: 6pt !important;
     line-height: 1.3;
   }
 
