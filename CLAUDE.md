@@ -11,8 +11,8 @@ Personal portfolio website for Olli Lehikoinen, primarily used for job seeking i
 ## Tech Stack
 
 - **Static site**: Vanilla HTML/CSS/JS, no build step
-- **Hosting**: GitHub Pages (auto-deploy on push to `main`)
-- **Domain**: otl.fi (configured via CNAME)
+- **Hosting**: Cloudflare Workers static assets (`wrangler.jsonc`), deploys from `main`
+- **Domain**: otl.fi
 - **Fonts**: Google Fonts (Fraunces headings, Caveat accent, Nunito Sans body)
 - **Dev server**: `python3 -m http.server 8000`
 
@@ -42,4 +42,6 @@ assets/             — Images, favicons, peek character PNG
 - Footer copyright year is static (update manually each January)
 - Header/footer loaded dynamically via `data-include` attributes
 - "Save as PDF" links to a pre-built text PDF (`otl-cv.pdf`), rendered from the print stylesheet by `npm run cv` (Playwright). A GitHub Action rebuilds and commits it on pushes touching `index.html`, `css/**`, `assets/**`. Not `window.print()`: "Microsoft Print to PDF" produces image-only PDFs that ATS parsers read as blank
+- Blog is hidden from nav/homepage and every blog page is `noindex` (job-search positioning); the AI-tools post is an unpublished TODO draft
+- Tailored per-role CVs are built from this `index.html` by `../olli_career/cv/build.py` via exact string replacements; edits to the Sono bullets or subtitle can break it — rerun it after changes
 - Print CSS hides non-CV sections (blog, testimonials, contact) and injects contact info via `::after`
